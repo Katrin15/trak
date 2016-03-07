@@ -1,0 +1,544 @@
+//@import url('ie9styles.css');
+.ie9 .viewAll a {
+	background: url(../images/btn_blue.png) center center;
+	//background-color: red;
+}
+.ie9 .headline h1, .ie9 .viewAll a {
+	font-family: 'Open Sans', sans-serif;
+	font-weight: bold;
+}
+
+		//.navbar-default {min-width: 340px;}
+
+// шрифт
+body{
+	font-family: 'Open Sans', sans-serif;
+}
+@font-face {
+	font-family:'LATO';
+	src: url('../fonts/Lato-Regular.ttf') format('truetype');
+	font-weight: normal;
+	font-style: normal;
+	font-stretch: normal;
+}
+
+//общее
+a:focus{
+	outline: none;
+}
+
+//
+header{
+	color: black;
+	span{display: inline-block; padding: 10px 0;}
+	.address span{ font-size: 14px; }
+	.phone span{ font-size: 16px; }
+
+	.fa-map-marker{
+		height: 11px;
+		width: 8px;
+		color: #d8354c;
+		padding: 11px 8px 14px 0; 
+	}
+
+	.fa-phone{
+		height: 10px;
+		width: 10px;
+		padding: 12px 8px 14px 0;
+		color: #d8354c;
+	}
+}
+
+header .raw > div {text-align: center;}
+.address, .phone {display: inline-block;}
+
+@media (max-width: 767px) {
+	.phone{float:left;  margin-left: -15px;} //margin-left: -15px;	
+	.logo{margin: 10px 0 10px 15px;}
+	.gallery .container {
+		border-top: solid #d8354c 2px;
+	}
+}
+@media (min-width: 768px) {
+	.phone{float:left;}
+	.logo{margin: 10px 0;}
+}
+@media (min-width: 992px) {
+	.address{float:right; margin-right: 15px;}
+
+}
+@media (min-width: 1200px) {
+	.phone{float:right; margin-right: -15px;}
+	.address{float:right; margin-right: -15px;}
+}
+
+
+// синяя полоска
+nav{
+	width: 100%;
+	background-color: #1b365b;
+}
+
+.navbar-default {
+    background-color: #1b365b;
+    border-color: #1b365b;
+    margin-bottom: 0;
+    	min-width: 340px; // 07.03 чтобы при 320px синяя полоска сверху растягивалась на весь контейнер, который шире окна (есть полоса прокрутки)
+}
+
+.navbar {
+    border-radius: 0;
+    border-style: none;
+}
+
+.logo {
+	float: left;
+	display: inline-block;
+	//margin: 10px 0;
+}
+
+.mycaret{
+	background: url(../images/caret.png) center top no-repeat;
+	display: inline-block;
+	line-height: 4px;
+	height: 4px;
+	width: 8px;
+	margin-left: 5px;
+}
+
+.navbar-default .navbar-nav > li > a:hover .mycaret{
+	background: url(../images/caret.png) center bottom no-repeat;
+}
+
+//меню XS
+.navbar-default .navbar-toggle	{
+	border-color: #81b1e4; border-width: 2px;
+	&:hover, &:focus{background-color: transparent;}
+	.icon-bar { background-color: #81b1e4;}
+}
+
+.redLine{
+	width: 100%;
+	height: 2px;
+	background-color: #d8354c;
+}
+
+
+@media (min-width: 768px) {
+
+// верхнее (основное ) меню
+.navbar-default .navbar-nav > li > a {
+	color: white;
+	//padding: 20px 0 20px 30px;
+	padding: 20px 0;
+	margin: 0 15px;
+	font-size: 16px;
+	&:hover{
+		color:#64b5f6;
+	}
+}
+.navbar-default .navbar-nav > li:last-child > a{ margin-right: 0;}
+
+
+.navbar-default .navbar-nav > .active > a { background-color: transparent; color: white; }
+.navbar-default .navbar-nav > .active > a:hover{ background-color: transparent; color: #64b5f6; }
+.navbar-default .navbar-nav > .active > a:focus{ background-color: transparent; color: white; }
+.navbar-default .navbar-nav > .active > a:focus:hover{ background-color: transparent; color: #64b5f6; }
+
+.navbar-default .navbar-nav > li > a { background-color: transparent; color: white; }
+.navbar-default .navbar-nav > li > a:hover { color: #64b5f6; }//background-color: transparent;
+.navbar-default .navbar-nav > li > a:focus { color: white; }//background-color: transparent;
+.navbar-default .navbar-nav > li > a:focus:hover { color: #64b5f6; }//background-color: transparent;
+
+.navbar-default .navbar-nav > .open > a { background-color: transparent; color: white; }
+.navbar-default .navbar-nav > .open > a:hover {  color: #64b5f6; }//background-color: transparent;
+.navbar-default .navbar-nav > .open > a:focus { background-color: transparent; color: white; }//background-color: transparent;
+.navbar-default .navbar-nav > .open > a:focus:hover { color: #64b5f6; }//background-color: transparent;
+
+
+.navbar-default .navbar-nav > li:hover > a { background-color: transparent; color:#64b5f6; }
+.navbar-default .navbar-nav > .open:hover > a { background-color: transparent; color:#64b5f6; }
+
+
+.dropdown-menu{
+		border-radius: 0;
+		border-style: none;
+	}
+
+// 
+.dropdown > .dropdown-menu {
+	background-color: #10294f;
+	padding: 15px 0; //15px 13px 15px 20px;
+	border-top: solid #2964bc 3px;
+	left:-50%;
+    right: auto;
+
+	&:before{
+		top: -20px;
+    	left:0; right:0; margin: auto;
+    	width: 10px;
+    	font-size: 20px;
+    	content: "\f0d8";//'\f105';//'hj';//"\f0d8";
+	    position: absolute;
+	    font-weight: normal;
+	    display: inline-block;
+	    font-family: FontAwesome;
+	    color: #2964bc;
+	}
+
+	li > a {
+		color: white;
+		padding: 0 13px 5px 20px;
+		font-size: 15px;
+	}
+	li:last-child > a {padding-bottom: 0;}
+
+	.dropdown-submenu{	// второе выпадающее меню
+		.dropdown-menu {
+			background-color: #071529;
+			border-top: solid #2964bc 3px;
+			padding: 15px 85px 15px 20px;
+
+			&:before{
+				top: 12px;
+		    	left:-6px;
+		    	//width: 10px;
+		    	font-size: 20px;
+		    	content: "\f0d9";
+			    position: absolute;
+			    font-weight: normal;
+			    display: inline-block;
+			    font-family: FontAwesome;
+			    color: #071529;
+			}
+
+			li > a{
+				color: #4c7eca;
+				padding: 0 0 5px 0;
+				
+
+				&:hover, &:focus:hover {
+					color: white; // цвет при наведении
+					background-color: transparent;
+				}
+				&:focus {
+					color: #4c7eca; // цвет при клике
+					background-color: transparent;
+				}
+				
+			}
+			li:last-child > a {padding-bottom: 0;}
+		}
+	}
+}
+
+
+
+// *******************************
+//326 первое выпадающее меню 
+//.navbar-nav .open > .dropdown-menu > li > a:hover{
+//	color: #4c7eca; //#333;
+//	background-color: transparent;
+//}
+//.navbar-nav .open > .dropdown-menu > li > a:focus {
+//	color: white; //#4c7eca; //или white
+//	background-color: transparent;
+//}
+//.navbar-nav .open > .dropdown-menu > li > a:focus:hover {
+//	color: #4c7eca;
+//	background-color: transparent;
+//}
+
+//.navbar-nav > .dropdown > .dropdown-menu > li > a:hover{
+//	color: #4c7eca; //#333;
+//	background-color: transparent;
+//}
+//.navbar-nav > .dropdown > .dropdown-menu > li > a:focus {
+//	color: white;
+//	background-color: transparent;
+//}
+//.navbar-nav > .dropdown > .dropdown-menu > li > a:focus:hover {
+//	color: #4c7eca;
+//	background-color: transparent;
+//}  
+
+
+.navbar-nav  .dropdown-menu  .dropdown-submenu:hover > a{
+	color:#4c7eca; //#333;
+	background-color: transparent;
+}
+.navbar-nav  .dropdown-menu  .dropdown-submenu:hover > a:focus{
+	color:#4c7eca; //#333;
+	background-color: transparent;
+}
+// *******************************
+
+
+
+//472
+.navbar-nav > li.dropdown:hover > .dropdown-menu {
+	display: block;
+}
+
+//476  главное (первое) меню, при нажатиии сслыка активная, раскрвает меню. и меню так и висит открытым пока не будет клика. благодаря этой строке,
+// выпавшее меню пропадает, если с него увести мышь. Меню выпало по клику, а ушло из-за того, что убрали мышь
+.open > .dropdown-menu {
+	display: none;
+}
+
+//492
+.dropdown-submenu {
+   position: relative;
+}
+
+//520  dropdown-menu в btrstp имеет position absolute. в 492 строке dropdown-submenu сделали relative и 2-е подменю встало после родит элемента,
+// как распорка в списке. Эту распорку сдвигаем left 100%, на всю свою ширину распорка сдвинулась в лево
+.dropdown-submenu > .dropdown-menu {
+	top: 3px;
+	left: 100%;
+	margin-top: -20px;
+	margin-left: -1px;
+}
+
+//532  2-ое выпадающее меню, выпадает на hover благодаря этой строке
+.dropdown-submenu:hover > .dropdown-menu {
+   	display: block;
+}
+
+.gallery .raw > div > a {
+	border-style: none;
+	padding: 0; margin-bottom: 10px; //padding: 0 0 10px; // нижний отступ
+	border-radius: 0;
+
+	//span с псевдоклассом
+	position: relative;
+	img{ position: relative;}
+
+	.overlay {
+		display: block;
+		position: absolute; top: 0; right: 0; left: 0; bottom: 0;
+		//width: 100%;
+		//height: 100%;
+		background-color: rgba(255, 255, 255, 0); //blue;//transparent;
+
+		&:hover{ 
+			background-color: rgba(17, 56, 115, 0.75);
+			&:after {
+			   font-family: FontAwesome;
+			   content: "\f002";
+			   display: inline-block;
+			   width: 38px;
+			   height: 38px;
+			   color: #fafafa;
+			   font-size: 38px;
+			   position:absolute; left:0; right:0; bottom:0; top: 0; margin: auto;
+			}
+		}
+	}
+}
+
+.gallery .raw > div{
+	padding: 0;
+
+	&:nth-child(1) { padding-left: 0; padding-right: 5px; }
+	&:nth-child(2) { padding-left: 5px; padding-right: 5px;	}
+	&:nth-child(3) { padding-left: 5px; padding-right: 0; }
+
+	a:last-child { margin-bottom: 0;}
+}
+
+#myCarousel ol { bottom: 5px;}
+
+} //@media (min-width: 992px)
+
+
+
+//536
+// XS устройства
+@media (max-width: 767px) {
+
+	.navbar-nav .open > .dropdown-menu {
+		background-color: #10294f;
+		font-size: 15px;
+	    font-family: 'Open Sans', sans-serif;
+
+		.dropdown-submenu > .dropdown-menu {
+			display: block;
+			margin-left: 15px;
+			background-color: #071529;
+			font-size: 15px;
+	    	font-family: 'Open Sans', sans-serif;
+		}
+	} 
+	
+
+	.container{
+		width: 340px;
+	}
+
+	.gallery .raw > div {
+		padding: 0;
+
+		& > a {
+			border-style: none;
+			padding: 0; margin-bottom: 10px; //padding: 0 0 10px; // нижний отступ
+			border-radius: 0;
+		}
+	}
+
+	#myCarousel ol { bottom: 5px;}
+
+		// верхнее (основное ) меню
+	    .navbar-default .navbar-nav > li > a,
+	    .navbar-default .navbar-nav > .active > a,
+	    .navbar-default .navbar-nav > .active > a:hover,
+	    .navbar-default .navbar-nav > .active > a:focus,
+	    .navbar-default .navbar-nav > li > a:focus {
+	        color: white;
+	        font-size: 16px;
+	        font-family: 'Open Sans', sans-serif;
+	        background-color: transparent;
+	        &:hover{
+	            color:#64b5f6;
+	        }
+	    }
+
+	    .navbar-default .navbar-nav > .open > a, 
+    	.navbar-default .navbar-nav > .open > a:focus, 
+    	.navbar-default .navbar-nav > .open > a:hover {
+        	background-color: transparent;
+        	color: #64b5f6
+    	}
+
+    	.navbar-default .navbar-nav .open .dropdown-menu li > a{
+        	color: white;
+    	}
+	    .navbar-default .navbar-nav .open .dropdown-menu li > a:focus,
+	    .navbar-default .navbar-nav .open .dropdown-menu li > a:hover{
+	        color:#4c7eca;
+	    }
+
+	    .navbar-nav .open > .dropdown-menu .dropdown-submenu > .dropdown-menu > li > a{
+	    	color:#4c7eca;
+	    	&:hover, &:focus {color:white;}
+	    }
+
+		// *******************************
+		//326 первое выпадающее меню 
+		//.navbar-default .navbar-nav .open > .dropdown-menu > li > a:hover{
+		//	color: #4c7eca; //#333;
+		//	background-color: transparent;
+		//}
+		//.navbar-default .navbar-nav .open > .dropdown-menu > li > a:focus {
+		//	color: white; //#4c7eca; //или white
+		//	background-color: transparent;
+		//}
+		//.navbar-default .navbar-nav .open > .dropdown-menu > li > a:focus:hover {
+		//	color: #4c7eca;
+		//	background-color: transparent;
+		//}
+
+		
+		//.navbar-default .navbar-nav > .dropdown > .dropdown-menu > li > a:hover{
+		//	color: #4c7eca; //#333;
+		//	background-color: transparent;
+		//}
+		//.navbar-default .navbar-nav > .dropdown > .dropdown-menu > li > a:focus {
+		//	color: white;
+		//	background-color: transparent;
+		//}
+		//.navbar-default .navbar-nav > .dropdown > .dropdown-menu > li > a:focus:hover {
+		//	color: #4c7eca;
+		//	background-color: transparent;
+		//}
+		
+		// *******************************
+
+} // @media (max-width: 767px)
+
+
+		// *******************************
+		//326 первое выпадающее меню 
+		.navbar-default .navbar-nav .open > .dropdown-menu > li > a:hover{
+			color: #4c7eca; //#333;
+			background-color: transparent;
+		}
+		.navbar-default .navbar-nav .open > .dropdown-menu > li > a:focus {
+			color: white; //#4c7eca; //или white
+			background-color: transparent;
+		}
+		.navbar-default .navbar-nav .open > .dropdown-menu > li > a:focus:hover {
+			color: #4c7eca;
+			background-color: transparent;
+		}
+
+		
+		.navbar-default .navbar-nav > .dropdown > .dropdown-menu > li > a:hover{
+			color: #4c7eca; //#333;
+			background-color: transparent;
+		}
+		.navbar-default .navbar-nav > .dropdown > .dropdown-menu > li > a:focus {
+			color: white;
+			background-color: transparent;
+		}
+		.navbar-default .navbar-nav > .dropdown > .dropdown-menu > li > a:focus:hover {
+			color: #4c7eca;
+			background-color: transparent;
+		}
+
+		// *******************************
+
+
+// Заголовок
+.headline h1{
+	font-size: 30px;
+	font-family: 'LATO', sans-serif;
+	color: #184e9f;
+	padding: 0;
+	margin: 45px 0;
+	line-height: normal;
+}
+
+
+//********* Button ************ //
+.viewAll {
+	a {
+		display: inline-block;
+		height: 44px;
+		//width: 198px;
+		margin: 20px 0 35px;
+		padding: 11px 16px;
+		font-size: 22px;
+		line-height: 22px;
+		color:white;
+		font-family: 'LATO', sans-serif;
+
+		border-style: none;
+		border-radius: 8px;
+		//border-color: #0d47a1;
+	
+		/* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#f2f6f8+0,d8e1e7+50,b5c6d0+51,e0eff9+100;Grey+Gloss+%232 */
+		background: #1976d2; /* Old browsers */
+		background: -moz-linear-gradient(top,  #1976d2 0%, #0d47a1 100%); /* FF3.6-15 */
+		background: -webkit-linear-gradient(top,  #1976d2 0%, #0d47a1 100%); /* Chrome10-25,Safari5.1-6 */
+		background: linear-gradient(to bottom,  #1976d2 0%, #0d47a1 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+		//filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#1976d2', endColorstr='#0d47a1',GradientType=0 ); /* IE6-9 */
+
+		-webkit-box-shadow: 5px 5px 1px 1px rgba(255, 255, 255, 0.45); /* Android 2.3+, iOS 4.0.2-4.2, Safari 3-4 */
+         box-shadow: 5px 5px 1px 1px rgba(255, 255, 255, 0.45); /* Chrome 6+, Firefox 4+, IE 9+, iOS 5+, Opera 10.50+ */
+
+         &:hover {
+         	color:white;
+         	//background: #1976d2;
+         }
+         &:focus {color:white; outline: none;}
+         &:focus:hover {color:white;}
+	}	
+}
+
+
+
+
+
+
+
